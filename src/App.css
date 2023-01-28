@@ -1,38 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Kavoon&family=Sanchez&display=swap");
 .App {
-  text-align: center;
+	text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+	padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input {
+	margin: 10px;
+	border-radius: 8px;
+	border: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btn {
+	padding: 10px;
+	margin: 10px 5px;
+	cursor: pointer;
+	border-radius: 10px;
+	background-color: #666;
+	color: aliceblue;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover {
+	background-color: #999;
+	color: aquamarine;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header .h1 {
+	font-size: 2rem;
+	padding: 15px;
+	color: aliceblue;
+	font-family: "Sanchez", serif;
+	font-weight: bold;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	background: #333;
+}
+#search {
+	display: flex;
+}
+
+#search input {
+	margin-right: auto;
+	min-width: 50%;
+}
+
+#login-page {
+	display: none;
+}
+
+.login-btn {
+	font-size: 1.25rem;
+	border: none;
+	background: none;
+	color: #61dafb;
+	padding: 5px;
+	font-weight: bold;
+	margin: 20px 50px 0 0;
+	cursor: pointer;
+}
+
+.login-btn:hover {
+	color: #a9dceb;
+	transform: scale(1.1);
+}
+
+.click-me {
+	padding: 10px;
+	border-radius: 8px;
+	color: #f1356d;
+	background-color: #333;
+	border: none;
+	cursor: pointer;
+}
+.click-me:hover {
+	background: #ce1c51;
+	color: #333;
+}
+
+#fom {
+	margin-inline-start: auto;
+}
+
+#search input {
+	border-style: none;
+}
+
+.blogs {
+	width: 500px;
+	margin: auto;
+}
+.blog-preview {
+	padding: 10px 16px;
+	margin: 20px 0;
+	border-block-end: 1px solid #fafafa;
+	border-radius: 8px;
+}
+
+.blog-preview:hover {
+	box-shadow: 1px 3px 8px #999;
+	cursor: pointer;
+}
+
+.blog-preview h2 {
+	font-size: 1.25rem;
+	color: #f1356d;
+	margin-block-end: 8px;
+}
+
+.blog-preview p span {
+	font-weight: bold;
+	color: #3b465e;
+}
+i{
+	color: #ce1c51;
+}
+.del-btn{
+	margin: auto;
+	
+}
+.del {
+	background: #ce1c51;
+	color: #fafafa;
+	border: none;
+	border-radius: 10px;
+	margin: 10px;
+	cursor: pointer;
+	font-size: 0.55rem;
+}
+.del:hover{
+	background: #333;
+	color: #ce1c51;
+}
+.blogs-body {
+	display: flex;
+}
+
+@media screen and (max-width: 860px) {
+	.header .h1 {
+		font-size: 1.5rem;
+	}
+
+	#login-page {
+		padding: 5px;
+	}
 }
