@@ -1,14 +1,12 @@
 import React from "react";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import BlogList from "./BlogList";
 import Button from "./components/Button";
 import Login from "./components/Login";
+import useFetch from "./useFetch";
 
 const Home = () => {
 	// const [name, setName] = useState("CLICK THE BUTTON");
-
-	const [blogs, setBlogs] = useState(null);
-	const [isLoading, setIsLoading] = useState(true);
 
 	/* const [person, setPerson] = useState("Macarena");
 	function changeName() {
@@ -20,15 +18,12 @@ const Home = () => {
 		setBlogs(newBlogs);
 	} */
 
-	useEffect(() => {
-		fetch("https://react-prac-ashen.vercel.app/blogs")
-			.then((r) => r.json())
-			.then((data) => {
-				console.log(data);
-				setBlogs(data);
-				setIsLoading(false);
-			});
-	}, []);
+	const {
+		data: blogs,
+		isLoading,
+		error,
+	} = useFetch("https://react-prac-ashen.vercel.app/blogs");
+
 	return (
 		<div id="home">
 			<div className="header">
@@ -43,6 +38,7 @@ const Home = () => {
 			</button> */}
 
 			<div className="blogs">
+				{error && <h6>{error}</h6>}
 				{isLoading && <div>Loading...</div>}
 				{blogs && <BlogList blogs={blogs} title="All Blogs" />}
 				{/* <button
