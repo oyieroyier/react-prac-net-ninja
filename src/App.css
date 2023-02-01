@@ -116,12 +116,11 @@ form {
 	font-weight: bold;
 	color: #3b465e;
 }
-i{
+i {
 	color: #ce1c51;
 }
-.del-btn{
+.del-btn {
 	margin: auto;
-	
 }
 .del {
 	background: #ce1c51;
@@ -132,12 +131,30 @@ i{
 	cursor: pointer;
 	font-size: 0.55rem;
 }
-.del:hover{
+.del:hover {
 	background: #333;
 	color: #ce1c51;
 }
 .blogs-body {
 	display: flex;
+}
+
+.navbar-menu {
+	display: flex;
+}
+
+.navbar-menu li {
+	list-style: none;
+	margin: 5px;
+	padding: 10px;
+	font-size: 1.5rem;
+}
+.navbar-menu li a {
+	color: #ee668f;
+	text-decoration: none;
+}
+.navbar-menu li a:hover {
+	color: #f399b4;
 }
 
 @media screen and (max-width: 860px) {

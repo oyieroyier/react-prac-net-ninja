@@ -4,8 +4,11 @@ const Login = () => {
 	function removeLogin(e) {
 		e.preventDefault();
 		const login = document.getElementById("login-page");
+		const navbar = document.getElementById("navbar-menu");
 
 		login.remove();
+		// login.style.display = "none";
+		navbar.style.display = "flex";
 	}
 
 	return (

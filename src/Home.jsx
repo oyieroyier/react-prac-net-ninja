@@ -1,8 +1,6 @@
 import React from "react";
 // import { useState, useEffect } from "react";
 import BlogList from "./BlogList";
-import Button from "./components/Button";
-import Login from "./components/Login";
 import useFetch from "./useFetch";
 
 const Home = () => {
@@ -26,11 +24,6 @@ const Home = () => {
 
 	return (
 		<div id="home">
-			<div className="header">
-				<h1 className="h1">Programming Blog</h1>
-				<Login />
-				<Button />
-			</div>
 
 			{/* <h2>{name}</h2>
 			<button className="click-me" onClick={changeName}>
