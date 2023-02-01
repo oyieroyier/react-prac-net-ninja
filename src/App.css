@@ -135,9 +135,6 @@ i {
 	background: #333;
 	color: #ce1c51;
 }
-.blogs-body {
-	display: flex;
-}
 
 .navbar-menu {
 	display: flex;
@@ -155,6 +152,10 @@ i {
 }
 .navbar-menu li a:hover {
 	color: #f399b4;
+}
+
+.blog-preview .link {
+	text-decoration: none;
 }
 
 @media screen and (max-width: 860px) {

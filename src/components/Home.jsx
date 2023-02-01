@@ -20,11 +20,10 @@ const Home = () => {
 		data: blogs,
 		isLoading,
 		error,
-	} = useFetch("https://react-prac-ashen.vercel.app/blogs");
+	} = useFetch("http://localhost:8000/blogs");
 
 	return (
 		<div id="home">
-
 			{/* <h2>{name}</h2>
 			<button className="click-me" onClick={changeName}>
 				{"CLICK ME"}

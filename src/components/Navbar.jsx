@@ -7,7 +7,7 @@ const Navbar = () => {
 	return (
 		<div>
 			<div className="header">
-				<h1 className="h1">Programming Blog</h1>
+				<h1 className="h1">React.js Blog</h1>
 				{/* <Login /> */}
 				{/* <Button /> */}
 				<nav className="navbar-menu">
