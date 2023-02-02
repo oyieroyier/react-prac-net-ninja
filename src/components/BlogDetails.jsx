@@ -9,7 +9,7 @@ const BlogDetails = () => {
 		data: blog,
 		isLoading,
 		error,
-	} = useFetch(" https://react-prac-ashen.vercel.app/blogs" + id);
+	} = useFetch(" https://api.npoint.io/1961c31d4e500e32b218/blogs/" + id);
 
 	return (
 		<div className="blog-details">

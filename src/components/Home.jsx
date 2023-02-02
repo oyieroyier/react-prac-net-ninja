@@ -20,7 +20,7 @@ const Home = () => {
 		data: blogs,
 		isLoading,
 		error,
-	} = useFetch("https://react-prac-ashen.vercel.app/blogs");
+	} = useFetch("https://api.npoint.io/1961c31d4e500e32b218/blogs/");
 
 	return (
 		<div id="home">
