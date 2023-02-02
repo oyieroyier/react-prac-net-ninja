@@ -111,6 +111,10 @@ form {
 	color: #f1356d;
 	margin-block-end: 8px;
 }
+.blog-preview p {
+	font-size: 1.25rem;
+	color: #333;
+}
 
 .blog-preview p span {
 	font-weight: bold;
@@ -156,6 +160,21 @@ i {
 
 .blog-preview .link {
 	text-decoration: none;
+	color: #333;
+}
+
+.blog-details h2,
+p {
+	text-align: center;
+	color: #f1356d;
+}
+.blog-details p span{
+	color: #3b465e;
+}
+.blog-details {
+	max-width: 720px;
+	text-align: left;
+	margin: auto;
 }
 
 @media screen and (max-width: 860px) {

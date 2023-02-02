@@ -20,7 +20,7 @@ const Home = () => {
 		data: blogs,
 		isLoading,
 		error,
-	} = useFetch("http://localhost:8000/blogs");
+	} = useFetch("https://react-prac-ashen.vercel.app/blogs");
 
 	return (
 		<div id="home">
