@@ -67,7 +67,7 @@
 			"title": "Performance in React (Advanced)",
 			"preview": "This article by Fatuman takes us through the advanced concepts of Peformance in React",
 			"body": "With a closer look at the developer’s tools, we can see the log for the first time when the component renders using this custom hook. It doesn’t make sense to run the side-effect for the initial rendering of the component though, because there is nothing to store in the local storage except the initial value. It’s a redundant function invocation, and should only run for every update (re-rendering) of the component.\n As mentioned, there is no React Hook that runs on every re-render, and there is no way to tell the useEffect hook in a React idiomatic way to call its function only on every re-render. However, by using React’s useRef Hook which keeps its ref.current property intact over re-renders, we can keep a made up state (without re-rendering the component on state updates) with an instance variable of our component’s lifecycle.\nWe are exploiting the ref and its mutable current property for imperative state management that doesn’t trigger a re-render. Once the hook is called from its component for the first time (component render), the ref’s current property is initialized with a false boolean called isMounted...",
-			"author": "Fatuma Abdulrahman",
+			"author": "Fatuma Abdullrahman",
 			"id": "10"
 		}
 	]
