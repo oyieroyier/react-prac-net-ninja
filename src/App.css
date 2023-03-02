@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Kavoon&family=Sanchez&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&family=Sanchez&display=swap');
 .App {
 	text-align: center;
 }
@@ -31,7 +31,7 @@ form {
 	font-size: 2rem;
 	padding: 15px;
 	color: aliceblue;
-	font-family: "Sanchez", serif;
+	font-family: 'Sanchez', serif;
 	font-weight: bold;
 }
 
@@ -213,7 +213,8 @@ p {
 	box-sizing: border-box;
 	display: block;
 }
-.create button{
+.create button,
+.blog-details button {
 	background: #f1356d;
 	color: #fafafa;
 	border: 0;

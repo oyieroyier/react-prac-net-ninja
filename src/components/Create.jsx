@@ -1,28 +1,42 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const Create = () => {
-	const [title, setTitle] = useState("");
-	const [body, setBody] = useState("");
-	const [author, setAuthor] = useState("Bob Oyier");
+	const [title, setTitle] = useState('');
+	const [body, setBody] = useState('');
+	const [author, setAuthor] = useState('Bob Oyier');
+	const [isPending, setIsPending] = useState(false);
+	const history = useHistory()
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		const blog = { title, body, author }
-		
-		console.log(blog);
+		const blog = { title, body, author };
+		setIsPending(true);
+
+		fetch('https://react-blog-backend-omega.vercel.app/blogs/', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify(blog),
+		}).then(() => {
+			console.log('new blog added successfully');
+			setIsPending(false);
+			// history.go(-1)
+			history.push('/');
+		});
+
 	};
 	return (
 		<div className="create">
 			<h2>Add a new blog</h2>
 			<form onSubmit={handleSubmit}>
-				<label>Blog Body</label>
+				<label>Blog Title</label>
 				<input
 					type="text"
 					required
 					value={title}
 					onChange={(e) => setTitle(e.target.value)}
 				/>
-				<label>Blog Title</label>
+				<label>Blog Body</label>
 				<textarea
 					required
 					value={body}
@@ -41,7 +55,8 @@ const Create = () => {
 					<option value="Bob Oyier">Bob Oyier</option>
 					<option value="Nyokabi Kamau">Nyokabi Kamau</option>
 				</select>
-				<button>Add Blog</button>
+				{!isPending && <button>Add Blog</button>}
+				{isPending && <button disabled>Adding blog...</button>}
 			</form>
 
 			<p>{title}</p>
